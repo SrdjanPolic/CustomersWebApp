@@ -99,6 +99,7 @@ GEM
     nokogiri (1.7.2-x86-mingw32)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
+    pg (0.20.0-x86-mingw32)
     public_suffix (2.0.5)
     rack (2.0.2)
     rack-test (0.6.3)
@@ -188,6 +189,7 @@ DEPENDENCIES
   devise!
   erubis
   jbuilder (~> 2.5)
+  pg
   rails
   railties
   sass-rails (~> 5.0)

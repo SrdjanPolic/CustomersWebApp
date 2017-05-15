@@ -14,7 +14,12 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rails'
 gem 'railties'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
 gem 'webrick'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
