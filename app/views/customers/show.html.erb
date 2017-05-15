@@ -1,0 +1,31 @@
+<h1>List of all customers</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Company</th>
+    <th>Vat number</th>
+    <th>Is admin</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <% content_for :header do %>
+      <p>Customer</p>
+  <% end%>
+
+  <tbody>
+  <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.name %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.company %></td>
+        <td><%= customer.vat_number %></td>
+        <td><%= customer.is_admin %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Back", :back %>

@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button-->
+      <!--%= link_to "Demo App", root_path, class: 'navbar-brand' %-->
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <!--li><%= link_to 'Posts', '#' %></li-->
+        <% if current_customer %>
+            <li><%= link_to 'Edit Profile',edit_customer_registration_path %></li>
+            <li><%= link_to 'Log out', destroy_customer_session_path, method: :delete %></li>
+            <% if current_customer.is_admin %>
+                <li><%= link_to 'List all customers (visible only to admins)', customers_show_path %></li>
+            <% end %>
+        <% end %>
+        <% if controller_name != 'sessions' and  !current_customer  %>
+            <%= link_to 'Log in', new_customer_session_path %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

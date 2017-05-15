@@ -1,0 +1,20 @@
+<h2>Customer informations</h2>
+<%= form_for(current_customer, as: current_customer, url: registration_path(current_customer), html: { method: :put }) do |f| %>
+<div><%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true, :disabled => true %></div>
+
+<div><%= f.label :company %><br />
+  <%= f.text_field :company, autofocus: true, :disabled => true %></div>
+
+<div><%= f.label :vat_number %><br />
+  <%= f.text_field :vat_number, :disabled => true %></div>
+<div class="field">
+  <%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true, :disabled => true %>
+</div>
+
+<div class="field">
+  <%= f.label :is_admin %><br />
+  <%= f.check_box :is_admin, :disabled => true %>
+</div>
+<% end %>

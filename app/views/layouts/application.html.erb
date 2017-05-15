@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <%= render 'layouts/flash_messages' %>
+  <% if controller_name == 'home' %>
+      <%= render 'layouts/menu' %>
+      <% if current_customer%>
+        <%= render 'customers/registrations/readonly' %>
+      <%end%>
+  <%end%>
+
+
+  </body>
+</html>
