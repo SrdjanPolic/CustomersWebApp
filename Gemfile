@@ -17,7 +17,7 @@ gem 'railties'
 group :development do
   gem 'sqlite3'
 end
-group :production do
+group :development do
   gem 'pg'
 end
 gem 'webrick'
