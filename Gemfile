@@ -14,7 +14,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rails'
 gem 'railties'
 # Use sqlite3 as the database for Active Record
-group :development do
+group :production do
   gem 'sqlite3'
 end
 group :development do
