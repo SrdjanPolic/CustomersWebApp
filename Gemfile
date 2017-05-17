@@ -15,7 +15,7 @@ gem 'rails'
 gem 'railties'
 # Use sqlite3 as the database for Active Record
 group :production do
-  gem 'sqlite3'
+  gem 'pg'
 end
 group :development do
   gem 'pg'
